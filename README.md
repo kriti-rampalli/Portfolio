@@ -8,6 +8,3 @@ Static site (no build step). Light and dark themes: the site follows the visitor
 3. After a minute the site is live at `https://<your-username>.github.io/<repo-name>/`.
 
 Note: GitHub Pages sites are public to anyone with the link. A free account cannot make a Pages site private.
-
-## Before sharing
-- Add your `resume.pdf` next to `index.html` (the Resume links point to it).
