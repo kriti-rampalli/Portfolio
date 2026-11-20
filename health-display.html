@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health Monitoring Display | Kriti Rampalli</title><meta name="description" content="Health Monitoring Display: a Linux-native UAV operator interface designed and built solo during a two-month aerospace internship."><script>var d='auto';if(d==='auto'){d=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}try{d=localStorage.getItem('kr-theme')||d}catch(e){}if(d==='dark')document.documentElement.setAttribute('data-theme','dark')</script><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="wrap"><nav class="nav" aria-label="Main">
+<a class="brand" href="index.html">Kriti Rampalli</a>
+<ul><li><a class="link" href="index.html#about">About</a></li><li><a class="link" href="index.html#projects" aria-current="page">Projects</a></li><li><a class="link" href="resume.pdf">Resume</a></li><li><a class="link" href="index.html#contact">Contact</a></li>
+<li><button class="toggle" id="themeToggle" type="button" aria-pressed="false"><span class="dot"></span><span id="themeLabel">Dark theme</span></button></li></ul>
+</nav></header><main id="main">
+<div class="wrap">
+<div class="crumb"><a href="index.html#projects">Projects</a> / Health Monitoring Display</div>
+<section class="hero alt" style="padding-top:28px">
+<div><p class="eyebrow">UAV operator interface</p><h1 style="font-size:clamp(36px,5.6vw,60px)">Health Monitoring Display</h1><div class="rule"></div>
+<p class="sub">A Linux-native monitoring interface developed during an aerospace internship to turn raw system data into clearer, decision-ready information for UAV operators.</p>
+<dl class="meta"><div><dt>My role</dt><dd>Solo, full-stack GUI: visual design, navigation, transformation logic, backend data handling</dd></div><div><dt>Timeline</dt><dd>Two-month internship</dd></div><div><dt>Platform</dt><dd>Linux on a Raspberry Pi 5, 18.5-inch display</dd></div><div><dt>Status</dt><dd>First-phase functionality delivered; presented to the client as built</dd></div></dl>
+</div>
+<div class="diagram" style="padding:0;overflow:hidden"><svg viewBox="0 0 320 200" role="img" aria-label="Abstract landscape display layout with a status bar, large overall-state area and component tiles"><rect width="320" height="200" class="svg-soft"/><rect x="24" y="22" width="272" height="156" rx="12" class="svg-strong"/><rect x="36" y="34" width="248" height="14" rx="5" style="fill:var(--accent)"/><rect x="36" y="58" width="116" height="104" rx="8" class="svg-panel" opacity=".92"/><circle cx="94" cy="110" r="34" fill="none" stroke-width="10" style="stroke:var(--accent)"/><path d="M94 76 A34 34 0 0 1 128 110" fill="none" stroke-width="10" stroke-linecap="round" style="stroke:var(--ink)"/><rect x="162" y="58" width="56" height="48" rx="8" class="svg-panel" opacity=".92"/><rect x="228" y="58" width="56" height="48" rx="8" class="svg-panel" opacity=".92"/><rect x="162" y="114" width="56" height="48" rx="8" class="svg-panel" opacity=".92"/><rect x="228" y="114" width="56" height="48" rx="8" style="fill:var(--accent)"/></svg></div>
+</section>
+
+<section class="s" id="constraints"><div class="cols"><div><p class="eyebrow">Constraints</p><h2>What the screen had to survive</h2>
+<p>The interface had to run natively on Linux, stay readable under widely varying lighting, support operators who might switch positions, and initially be navigable through only a few physical controls. An existing message parser stayed outside my scope because multiple teams depended on it.</p>
+<p>I entered with almost no GUI-development experience, so I only implemented architecture I understood well enough to maintain and explain.</p></div>
+<div class="stats" style="grid-template-columns:1fr 1fr;margin:0"><div class="card strong"><div class="stat">5</div><p>major interface iterations</p></div><div class="card"><div class="stat">5</div><p>expert reviewers: two pilots, two test pilots, a flight-test engineer</p></div></div></div></section>
+
+<section class="s" id="decisions"><p class="eyebrow">Decisions</p><h2>Show less, so the right thing is seen first</h2>
+<div class="cols center"><div><p>I chose not to display every available value at once. The top level emphasizes overall state and frequently needed information, while deeper pages expose component detail and errors.</p>
+<p><b>Rejected: a vertical layout.</b> It did not fit the physical control station, so I moved to a landscape design whose primary screen supports either operator position.</p>
+<p><b>Challenged: button-only input.</b> After demonstrating how much extra navigation one mouse could add without consuming control-panel space, I received approval to include one.</p></div>
+<div class="diagram"><svg viewBox="0 0 560 250" role="img" aria-label="Information hierarchy: overall state on top, subsystem summaries below, component detail and errors at the deepest level">
+<g font-size="15"><rect x="130" y="8" width="300" height="56" rx="14" class="svg-strong"/><text x="280" y="42" text-anchor="middle" class="svg-strong-ink" font-weight="700">Overall state + frequent info</text>
+<rect x="70" y="92" width="420" height="56" rx="14" class="svg-accent"/><text x="280" y="126" text-anchor="middle" font-weight="700" style="fill:#2B2230">Subsystem summaries</text>
+<rect x="10" y="176" width="540" height="56" rx="14" class="svg-panel" style="stroke:var(--line)"/><text x="280" y="210" text-anchor="middle" class="svg-ink" font-weight="700">Component-level detail + errors</text>
+<path d="M280 64 V92 M280 148 V176" class="svg-strokeink" stroke-width="2.2"/></g></svg></div></div></section>
+
+<section class="s" id="architecture"><p class="eyebrow">Architecture</p><h2>Separating reading, transformation and display</h2>
+<div class="diagram scroll"><svg viewBox="0 0 760 250" role="img" aria-label="Three-layer architecture: a message parser outside my scope feeds a reading layer, then a transformation layer, then a display layer">
+<g font-size="15">
+<rect x="6" y="70" width="150" height="100" rx="16" class="svg-panel" style="stroke:var(--line)" stroke-dasharray="6 5"/><text x="81" y="112" text-anchor="middle" class="svg-ink" font-weight="700">Message parser</text><text x="81" y="134" text-anchor="middle" class="svg-body" font-size="13">existing, shared by</text><text x="81" y="151" text-anchor="middle" class="svg-body" font-size="13">several teams</text>
+<path d="M156 120 H196" class="svg-strokeink" stroke-width="2.2"/>
+<rect x="196" y="70" width="170" height="100" rx="16" class="svg-accent"/><text x="281" y="112" text-anchor="middle" font-weight="700" style="fill:#2B2230">Reading</text><text x="281" y="136" text-anchor="middle" font-size="13" style="fill:#2B2230">source can change</text><text x="281" y="153" text-anchor="middle" font-size="13" style="fill:#2B2230">without UI rewrites</text>
+<path d="M366 120 H406" class="svg-strokeink" stroke-width="2.2"/>
+<rect x="406" y="70" width="170" height="100" rx="16" class="svg-strong"/><text x="491" y="112" text-anchor="middle" class="svg-strong-ink" font-weight="700">Transformation</text><text x="491" y="136" text-anchor="middle" class="svg-strong-ink" font-size="13">raw values to</text><text x="491" y="153" text-anchor="middle" class="svg-strong-ink" font-size="13">operator-ready state</text>
+<path d="M576 120 H616" class="svg-strokeink" stroke-width="2.2"/>
+<rect x="616" y="70" width="138" height="100" rx="16" class="svg-accent"/><text x="685" y="112" text-anchor="middle" font-weight="700" style="fill:#2B2230">Display</text><text x="685" y="136" text-anchor="middle" font-size="13" style="fill:#2B2230">shared fonts, colors</text><text x="685" y="153" text-anchor="middle" font-size="13" style="fill:#2B2230">and components</text>
+<text x="196" y="205" class="svg-body" font-size="13.5">The layers I owned, end to end →</text><path d="M196 214 H754" class="svg-dash" stroke-width="2"/>
+</g></svg></div>
+<p style="margin-top:18px;max-width:72ch">My earliest screens depended too directly on one another, which turned brittle as display logic grew and data sources changed. Splitting the app into three layers let the source change without rewriting the interface. Repeated elements and global fonts and colors were centralized, so later operator-requested revisions were quick to make.</p></section>
+
+<section class="s" id="data"><div class="cols"><div><p class="eyebrow">Not accepting a value on trust</p><h2>A flight-time fix</h2>
+<p>The open-source system's flight-time value could reset after a lost and restored connection. Instead, I stored the timestamp of the first received data packet and calculated elapsed time from that reference, which gave the display a more reliable number.</p></div>
+<div class="card soft"><p class="eyebrow">Evidence, stated plainly</p><p style="margin:0">Ongoing review came from experts (two pilots, two test pilots and a flight-test engineer). These were expert reviews, not a formal usability test, and I left before live-aircraft validation was possible.</p></div></div></section>
+
+<section class="s" id="outcome"><div class="cols"><div><p class="eyebrow">Outcome</p><h2>Delivered, documented, handed off</h2>
+<p>By the end of the internship the requested first-phase functionality was implemented, with a deployment procedure, test plan, handoff documentation and plans for later work that depended on unavailable hardware or other teams.</p></div>
+<div><div class="card strong" style="margin-bottom:20px"><p class="eyebrow">Recognition</p><p style="margin:0;font-size:18px">Top-level management told me my program ran smoothly in the live demos, and appreciated my work, commitment and output as an intern who worked on the product for roughly two months. The project was presented directly to the client without any changes.</p></div>
+<div class="card soft"><p class="eyebrow">What I'd do next time</p><p style="margin:0">Keep the modular approach, but research existing aviation-interface conventions earlier so established patterns inform the first interface rather than arriving later with expert feedback.</p></div></div></div>
+<div class="note" style="margin-top:28px"><b>Why there are no screenshots.</b> This display is confidential and effectively the company's property, so I cannot share images of my output. The layouts on this page are abstract diagrams, not the real interface.</div></section>
+</div></main><div class="next wrap" style="padding:36px 0 0"><a class="btn ghost" href="index.html#projects">All projects</a><a class="btn strong" href="tape-dispenser.html">Next: Multi-Roll Tape Dispenser →</a></div><footer class="foot wrap" id="contact"><div class="row"><div><b style="color:var(--ink)">Kriti Rampalli</b><br>Industrial Engineering + Engineering Design, Penn State</div>
+<div><a href="mailto:rampallikriti@gmail.com">rampallikriti@gmail.com</a><br><a href="https://www.linkedin.com/in/kriti-rampalli-5b1262251" rel="noopener">LinkedIn</a> · <a href="resume.pdf">Resume (PDF)</a></div></div></footer><script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('themeToggle'), lab = document.getElementById('themeLabel');
+  function apply(t) { if (t === 'dark') { root.setAttribute('data-theme', 'dark'); } else { root.removeAttribute('data-theme'); }
+    if (btn) { btn.setAttribute('aria-pressed', t === 'dark'); lab.textContent = t === 'dark' ? 'Light theme' : 'Dark theme'; } }
+  var saved = null; try { saved = localStorage.getItem('kr-theme'); } catch (e) {}
+  var def = 'auto'; if (def === 'auto') { def = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; }
+  apply((saved || def) === 'dark' ? 'dark' : 'light');
+  if (btn) btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; apply(next);
+    try { localStorage.setItem('kr-theme', next); } catch (e) {} });
+})();
+</script></body></html>

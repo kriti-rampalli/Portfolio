@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-Roll Tape Dispenser (WIP) | Kriti Rampalli</title><meta name="description" content="Work in progress: a 3D-printed multi-roll tape dispenser, printed and tested, now heading into its second iteration."><script>var d='auto';if(d==='auto'){d=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}try{d=localStorage.getItem('kr-theme')||d}catch(e){}if(d==='dark')document.documentElement.setAttribute('data-theme','dark')</script><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="wrap"><nav class="nav" aria-label="Main">
+<a class="brand" href="index.html">Kriti Rampalli</a>
+<ul><li><a class="link" href="index.html#about">About</a></li><li><a class="link" href="index.html#projects" aria-current="page">Projects</a></li><li><a class="link" href="resume.pdf">Resume</a></li><li><a class="link" href="index.html#contact">Contact</a></li>
+<li><button class="toggle" id="themeToggle" type="button" aria-pressed="false"><span class="dot"></span><span id="themeLabel">Dark theme</span></button></li></ul>
+</nav></header><main id="main">
+<div class="wrap">
+<div class="crumb"><a href="index.html#projects">Projects</a> / Multi-Roll Tape Dispenser</div>
+<section class="hero alt" style="padding-top:28px">
+<div><p class="eyebrow">Additive manufacturing · Fall 2026</p><h1 style="font-size:clamp(36px,5.6vw,60px)">Multi-Roll Tape Dispenser</h1><div class="rule"></div>
+<p><span class="pill wip">Work in progress</span></p>
+<p class="sub">A 3D-printed dispenser that holds more than one roll of tape, designed around the rules of restrictive design for additive manufacturing (DfAM).</p>
+<dl class="meta"><div><dt>My role</dt><dd>Team member; preparing a short talk on restrictive DfAM for the project</dd></div><div><dt>Team</dt><dd>Sydney Brubaker, Evan Geiss and me</dd></div><div><dt>Process</dt><dd>Desktop FDM printing</dd></div><div><dt>Status</dt><dd>Iteration 1 printed and tested; iteration 2 about to begin</dd></div></dl>
+</div>
+<div class="diagram" style="padding:0;overflow:hidden"><img src="assets/tape_print_assembled.jpg" alt="The printed Iteration 1 tape dispenser: an open frame with a roll rod on the left and a serrated cutting blade on the right" style="width:100%;display:block;max-height:560px;object-fit:cover"></div>
+</section>
+
+<section class="s" id="progress"><p class="eyebrow">Where it stands</p><h2>Printed, tested, and about to iterate</h2>
+<div class="diagram scroll"><svg viewBox="0 0 760 150" role="img" aria-label="Project stages: design, print and test are done; iteration is next; final design is upcoming">
+<line x1="50" y1="40" x2="710" y2="40" class="svg-line" stroke-width="3"/>
+<g font-size="15">
+<circle cx="70" cy="40" r="16" class="svg-strong"/><path d="M62 40 l6 6 l11 -12" fill="none" stroke-width="3" stroke-linecap="round" style="stroke:var(--strong-ink)"/>
+<text x="70" y="84" text-anchor="middle" class="svg-ink" font-weight="700">Design</text><text x="70" y="104" text-anchor="middle" class="svg-body" font-size="13.5">Iteration 1 done</text>
+<circle cx="225" cy="40" r="16" class="svg-strong"/><path d="M217 40 l6 6 l11 -12" fill="none" stroke-width="3" stroke-linecap="round" style="stroke:var(--strong-ink)"/>
+<text x="225" y="84" text-anchor="middle" class="svg-ink" font-weight="700">Print</text><text x="225" y="104" text-anchor="middle" class="svg-body" font-size="13.5">Fully assembled</text>
+<circle cx="380" cy="40" r="16" class="svg-strong"/><path d="M372 40 l6 6 l11 -12" fill="none" stroke-width="3" stroke-linecap="round" style="stroke:var(--strong-ink)"/>
+<text x="380" y="84" text-anchor="middle" class="svg-ink" font-weight="700">Test</text><text x="380" y="104" text-anchor="middle" class="svg-body" font-size="13.5">Cuts and dispenses</text>
+<circle cx="535" cy="40" r="16" class="svg-accent"/><circle cx="535" cy="40" r="6" class="svg-strong"/>
+<text x="535" y="84" text-anchor="middle" class="svg-ink" font-weight="700">Iterate</text><text x="535" y="104" text-anchor="middle" class="svg-body" font-size="13.5">Next up</text>
+<circle cx="690" cy="40" r="16" class="svg-panel" style="stroke:var(--line)" stroke-dasharray="4 4"/>
+<text x="690" y="84" text-anchor="middle" class="svg-ink" font-weight="700">Final design</text><text x="690" y="104" text-anchor="middle" class="svg-body" font-size="13.5">Upcoming</text>
+</g></svg></div>
+<p style="margin-top:18px;max-width:72ch">The first version is printed and assembled. It cuts both Scotch tape and paper tape and dispenses a 1 inch length well. The project is still a work in progress because the next round of changes has not been built yet.</p></section>
+
+<section class="s" id="print"><p class="eyebrow">Iteration 1</p><h2>The printed parts</h2>
+<div class="grid3 figgrid"><figure><div class="fig"><img src="assets/tape_print_base.jpg" alt="Printed base frame" style="aspect-ratio:3/4;object-fit:cover"></div><figcaption><b>Base.</b> The frame holds the rod, the tape path and the bottom serrated blade.</figcaption></figure>
+<figure><div class="fig"><img src="assets/tape_print_drum.jpg" alt="Printed tape drum" style="aspect-ratio:3/4;object-fit:cover"></div><figcaption><b>Drums.</b> Separate drums let different roll sizes share one layout.</figcaption></figure>
+<figure><div class="fig"><img src="assets/tape_blade_test.jpg" alt="Hand holding a small printed test piece with serrated teeth" style="aspect-ratio:3/4;object-fit:cover"></div><figcaption><b>Blade test.</b> An early 10° serrated test showed stair stepping, so the final base uses 25° teeth.</figcaption></figure></div></section>
+
+<section class="s" id="cad"><p class="eyebrow">Design</p><h2>The chassis, in CAD</h2>
+<div class="grid2"><figure><div class="fig"><img src="assets/tape_cad_base.jpg" alt="Fusion 360 model of the main base with roll supports, rod holes and a serrated blade"></div><figcaption><b>Main base.</b> Modeled in Fusion 360 from measurements of the tape rolls.</figcaption></figure>
+<figure><div class="fig"><img src="assets/tape_latest.png" alt="Rendered CAD model of the chassis side and bottom plates"></div><figcaption><b>Separate printable parts.</b> Drums, rod, bumpers, cutter arm and center beam print independently, so one weak part can be redesigned alone.</figcaption></figure></div></section>
+
+<section class="s" id="testing"><p class="eyebrow">What testing showed</p><h2>It works, and three things need fixing</h2>
+<table><thead><tr><th>Area</th><th>What we saw</th><th>Planned change</th></tr></thead><tbody>
+<tr><td>Cutting</td><td>Cuts Scotch and paper tape, but the stickiness makes the cut stressful.</td><td>Swap the sides of the scissor mechanism so the cut is easier.</td></tr>
+<tr><td>1 inch length</td><td>Dispenses 1 inch well.</td><td>Rotate the 1 inch marker to the y-axis instead of extending the frame along the x-axis, which saves build material and space.</td></tr>
+<tr><td>Threading</td><td>The tape rolls back toward the roll after each dispense.</td><td>Reduce the height of the threading bar.</td></tr>
+</tbody></table>
+<p style="margin-top:14px;font-size:14px;color:var(--muted)">These are planned changes, not results. I will update this page after the next print.</p></section>
+
+<section class="s" id="constraints"><div class="cols"><div><p class="eyebrow">Why restrictive DfAM</p><h2>Designing for the printer, not around it</h2>
+<p>The course asks us to design for the limits of additive manufacturing from the first sketch rather than fix print failures afterward. Restrictive DfAM means those limits shape the form: what can be printed without supports, how parts are oriented, and how many parts the design needs. The marker change above is a small example: turning it saves filament and footprint.</p></div>
+<div class="card soft"><p class="eyebrow">Still to come</p><p style="margin:0">Iteration 2 prints and what changed between versions.</p></div></div></section>
+</div></main><div class="next wrap" style="padding:36px 0 0"><a class="btn ghost" href="index.html#projects">All projects</a><a class="btn strong" href="aurora.html">Next: Aurora →</a></div><footer class="foot wrap" id="contact"><div class="row"><div><b style="color:var(--ink)">Kriti Rampalli</b><br>Industrial Engineering + Engineering Design, Penn State</div>
+<div><a href="mailto:rampallikriti@gmail.com">rampallikriti@gmail.com</a><br><a href="https://www.linkedin.com/in/kriti-rampalli-5b1262251" rel="noopener">LinkedIn</a> · <a href="resume.pdf">Resume (PDF)</a></div></div></footer><script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('themeToggle'), lab = document.getElementById('themeLabel');
+  function apply(t) { if (t === 'dark') { root.setAttribute('data-theme', 'dark'); } else { root.removeAttribute('data-theme'); }
+    if (btn) { btn.setAttribute('aria-pressed', t === 'dark'); lab.textContent = t === 'dark' ? 'Light theme' : 'Dark theme'; } }
+  var saved = null; try { saved = localStorage.getItem('kr-theme'); } catch (e) {}
+  var def = 'auto'; if (def === 'auto') { def = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; }
+  apply((saved || def) === 'dark' ? 'dark' : 'light');
+  if (btn) btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; apply(next);
+    try { localStorage.setItem('kr-theme', next); } catch (e) {} });
+})();
+</script></body></html>

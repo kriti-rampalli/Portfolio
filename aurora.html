@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurora | Kriti Rampalli</title><meta name="description" content="Aurora: a sunrise-simulating wall art alarm clock with weather and ambient lighting. Mobile interface designed and tested with 17 users."><script>var d='auto';if(d==='auto'){d=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}try{d=localStorage.getItem('kr-theme')||d}catch(e){}if(d==='dark')document.documentElement.setAttribute('data-theme','dark')</script><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="wrap"><nav class="nav" aria-label="Main">
+<a class="brand" href="index.html">Kriti Rampalli</a>
+<ul><li><a class="link" href="index.html#about">About</a></li><li><a class="link" href="index.html#projects" aria-current="page">Projects</a></li><li><a class="link" href="resume.pdf">Resume</a></li><li><a class="link" href="index.html#contact">Contact</a></li>
+<li><button class="toggle" id="themeToggle" type="button" aria-pressed="false"><span class="dot"></span><span id="themeLabel">Dark theme</span></button></li></ul>
+</nav></header><main id="main">
+<div class="wrap">
+<div class="crumb"><a href="index.html#projects">Projects</a> / Aurora</div>
+<section class="hero" style="padding-top:28px">
+<div><p class="eyebrow">Connected wellness and lifestyle product</p><h1>Aurora</h1><div class="rule"></div>
+<p class="sub">A sunrise-simulating wall art alarm clock with weather and ambient lighting.</p>
+<p>A wall-mounted lifestyle concept combining sunrise lighting, ambient scenes, weather information and sound, supported by a tested mobile control interface. Four of us built it in a semester for people who want to start the morning with light instead of a phone.</p>
+<dl class="meta"><div><dt>My role</dt><dd>Mobile interface, product landing page, documentation and logistics, co-author of the market memo</dd></div><div><dt>Team</dt><dd>Four people, Spring 2026 (EDSGN 467)</dd></div><div><dt>User testing</dt><dd>17 participants, 4 timed tasks</dd></div><div><dt>Status</dt><dd>Interface tested; app not connected to hardware</dd></div></dl>
+<div class="btns"><a class="btn strong" href="#walkthrough">Watch the walkthrough</a><a class="btn ghost" href="#results">Jump to results</a></div></div>
+<div class="photo" style="aspect-ratio:1"><img src="assets/hero_square.jpg" alt="Aurora prototype: an orange and black frame with an amber light panel above a white LED clock reading 12:52 and a speaker" width="1000" height="957"></div>
+</section>
+
+<section class="s" id="brief"><div class="cols"><div><p class="eyebrow">The brief and the ambition</p><h2>Wellness meets décor</h2>
+<p><b>Who it's for.</b> People who invest in both wellness and aesthetics and want a sunrise lamp without another purely functional object in the room. Our beachhead was high-income millennials without kids who are intentional about their daily routines.</p>
+<p><b>The initial concept.</b> Intentionally ambitious:</p>
+<div><span class="pill">Simulated sunrise</span><span class="pill">Sound</span><span class="pill">Weather information</span><span class="pill">Ambient lighting</span><span class="pill">Connected controls</span><span class="pill">Customizable wall décor</span></div>
+<p><b>The constraint.</b> Roughly $25–30 in added team funds beyond the free lab inventory. We committed to the vision before we knew what that would support.</p>
+<div class="pull">We committed before we knew which parts of that ambition we could realistically prove.</div></div>
+<div><div class="card strong"><div class="stat">89%</div><p style="margin:10px 0 0"><b>of Americans check their phone within 10 minutes of waking</b> (Reviews.org, cited in our market memo). Aurora's aim: start the morning with light, not a phone.</p></div>
+<div class="fig" style="margin-top:20px"><img src="assets/venn.png" alt="Venn diagram of four markets: wake-up lights, decorative lighting, wall art and wellness technology, with the ideal customer at the overlap"><figcaption style="padding:0 6px 4px">The ideal customer sits where four markets overlap (market memo).</figcaption></div>
+<div class="photo" style="margin-top:20px"><img src="assets/concept_gen.png" alt="AI-generated concept render of two backlit wall art panels, one amber and one blue"></div>
+<p style="font-size:14px;color:var(--muted);margin-top:8px">Concept render. AI-generated, used to visualize the wall-art idea (we have no sketches from that stage).</p></div></div></section>
+
+<section class="s" id="interface"><div class="cols center"><div><p class="eyebrow">Interface design</p><h2>Designing the app: familiar on purpose</h2>
+<p>For an already unfamiliar product, I chose not to invent a new interaction language. I sketched a flow and wireframe on a whiteboard, then built a functional interactive prototype around familiar conventions from alarm and smart-light apps.</p>
+<p>Navigation separates <b>Home, Alarms, Ambient, Weather</b> and <b>Settings</b>. Familiar alarm controls were extended with Aurora-specific choices: dawn duration, brightness, color temperature and wake-up sound.</p>
+<div><span class="pill outline">Home</span><span class="pill outline">Alarms</span><span class="pill outline">Ambient</span><span class="pill outline">Weather</span><span class="pill outline">Settings</span></div></div>
+<div class="phones"><img src="assets/app_home.png" alt="Aurora app home screen with clock, brightness slider and scenes"><img src="assets/app_alarm.png" alt="Aurora app new alarm screen with dawn duration, brightness and color temperature sliders"><img src="assets/app_ambient.png" alt="Aurora app ambient presets such as Warm Glow, Northern Lights, Sunset and Moonlight"></div></div></section>
+
+<section class="s" id="walkthrough"><div class="cols center"><div class="videoframe"><video controls preload="metadata" poster="assets/walkthrough_poster.jpg" aria-label="51 second walkthrough of the Aurora app prototype"><source src="assets/aurora_app_walkthrough.mp4" type="video/mp4">Your browser can't play this video.</video></div>
+<div><p class="eyebrow">Prototype walkthrough · 51 seconds</p><h2>The interactive prototype</h2><p>A tap-through of the Home screen, creating a new alarm, and choosing an ambient preset. This is the interface the 17 testers used.</p>
+<div class="note"><b>Honest scope.</b> The interface is functional and tested, but it was never connected to the hardware. The prototype in the photo runs on its own.</div></div></div></section>
+
+<section class="s" id="hardware"><p class="eyebrow">Hardware and research</p><h2>Hardware and research changed the product</h2>
+<div class="grid3"><div><div class="card" style="min-height:230px"><span class="pill dark">Challenged</span><h3>Light color was the wrong emphasis</h3><p>A researcher studying the photocircadian system challenged our focus on color and wavelength and pointed to perceived brightness and source angle.</p></div></div>
+<div><div class="photo" style="aspect-ratio:16/10"><img src="assets/led_clock.jpg" alt="Close-up of the LED matrix clock display glowing white"></div><span class="pill" style="margin-top:14px">Added</span><h3>A second display and a diffusion layer</h3><p>The LED matrix gave useful brightness control, but its resolution could not show weather text clearly. We added a smaller display and improvised a diffusion layer to soften the pixels.</p></div>
+<div><div class="photo" style="aspect-ratio:16/10"><img src="assets/proto_wide.jpg" alt="Side view of the final Aurora prototype"></div><span class="pill dark" style="margin-top:14px">Cut</span><h3>The decorative-art concept</h3><p>As implementation pressure grew, the customizable wall décor was de-scoped. The final prototype was still bulkier than intended.</p></div></div>
+<h3 style="margin-top:34px">Bill of materials, prototype v1.0 · 7 unique parts, 15 pieces</h3>
+<div class="bar"><span class="pill">3D-printed frame</span><span class="pill">ESP32 board</span><span class="pill">DY-SV17F audio module</span><span class="pill">Mini speaker</span><span class="pill">LED matrix ×5</span><span class="pill">Diffuser panel</span><span class="pill">Acrylic panels ×5</span></div></section>
+
+<section class="s" id="results"><p class="eyebrow">User testing</p><h2>What 17 testers told us</h2>
+<p style="max-width:62ch">Seventeen participants completed four timed tasks in sessions of about 15 minutes. Most tasks went well, but the custom ambient scene was the hardest, and one weather pattern did not read.</p>
+<div class="stats stats3">
+<div class="card strong"><div class="stat">88%</div><p>would use it in their daily routine (15 of 17)</p></div>
+<div class="card strong"><div class="stat">71%</div><p>preferred waking to light and sound together (12 of 17)</p></div>
+<div class="card"><div class="stat">16/17</div><p>found setting an alarm easy</p></div>
+<div class="card"><div class="stat">15/17</div><p>found changing location easy</p></div>
+<div class="card"><div class="stat">14/17</div><p>found a custom ambience easy, the hardest task</p></div>
+<div class="card soft"><div class="stat">41%</div><p>recognized the Snow pattern, so it needs a redesign</p></div></div>
+<div class="grid2"><figure><div class="fig"><img src="assets/fig_weather.png" alt="Chart of six pixel weather patterns and the percent of testers who matched each: Sunny 88%, Snow 41%, Extreme heat 76%, Cloudy 53%, Extreme rain 71%, Rain/Hail 52%"></div><figcaption>Six weather patterns on a 32×32 LED grid: five reached majority recognition. Snow looked too much like Rain/Hail.</figcaption></figure>
+<figure><div class="fig"><img src="assets/fig_prefs.png" alt="Charts of preferred wake-up volume settings and preferred mode of waking up"></div><figcaption>Preferred wake-up mode and volume.</figcaption></figure></div>
+<p style="font-size:14px;color:var(--muted);margin-top:14px">Source: Usability Testing and Results memo, April 2026.</p></section>
+
+<section class="s" id="story"><div class="cols"><div><p class="eyebrow">Telling the story</p><h2>The pitch</h2>
+<p>A 3–5 minute pitch built on one idea: the same person, the same morning, told twice. Take one is a phone alarm, a rushed montage and a cold walk to work. Take two is a slow sunrise from Aurora, a calm montage, a glance at the weather module and a jacket.</p>
+<div class="pull">Same person. Same morning. Different story.</div></div>
+<div><p class="eyebrow">Positioning</p><p>Sunrise lamps sit on your nightstand doing nothing. Smart displays demand your attention. Decorative lights just look nice. Aurora is all of these, without their compromises.</p>
+<div class="note"><b>Honest note.</b> The pitch shows the full vision, including an art mode the prototype never built. I also designed and built the product landing page.</div>
+<div class="btns"><a class="btn strong" href="aurora-pitch-film.html">Watch the pitch film →</a></div></div></div></section>
+
+<section class="s" id="outcome"><p class="eyebrow">Outcome, limits, lessons</p><h2>Planned vs. delivered</h2>
+<div class="cols wide-left"><div class="tablewrap"><table><thead><tr><th>Element</th><th>Status</th><th>Note</th></tr></thead><tbody>
+<tr><td>Mobile interface</td><td>Delivered</td><td>17 testers; 14–16 of 17 found core tasks easy</td></tr>
+<tr><td>Landing page</td><td>Built</td><td>Hero, how it works, waitlist</td></tr>
+<tr><td>Pitch film</td><td>Produced</td><td>Written, directed, filmed and edited by me</td></tr>
+<tr><td>Weather icons</td><td>Partly worked</td><td>5 of 6 recognized; Snow needs a redesign</td></tr>
+<tr><td>Wall-mounted prototype</td><td>Built</td><td>Bulkier than intended</td></tr>
+<tr><td>App-to-hardware link</td><td>Not connected</td><td>Interface never linked to the unit</td></tr>
+<tr><td>Wall art mode</td><td>De-scoped</td><td>Cut as implementation pressure grew</td></tr></tbody></table></div>
+<div class="card soft"><p class="eyebrow">What I learned</p><p><b>Ideation is not commitment.</b> I would still brainstorm just as broadly, but add a feasibility checkpoint before defining the product: materials, technical capability, budget, time and a minimum demonstrable feature set.</p><p style="margin:0"><b>Familiar beats novel</b> when the product is already new to the user.</p></div></div></section>
+</div></main><div class="next wrap" style="padding:36px 0 0"><a class="btn ghost" href="index.html#projects">All projects</a><a class="btn strong" href="study-pod.html">Next: Modular Study Pod →</a></div><footer class="foot wrap" id="contact"><div class="row"><div><b style="color:var(--ink)">Kriti Rampalli</b><br>Industrial Engineering + Engineering Design, Penn State</div>
+<div><a href="mailto:rampallikriti@gmail.com">rampallikriti@gmail.com</a><br><a href="https://www.linkedin.com/in/kriti-rampalli-5b1262251" rel="noopener">LinkedIn</a> · <a href="resume.pdf">Resume (PDF)</a></div></div></footer><script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('themeToggle'), lab = document.getElementById('themeLabel');
+  function apply(t) { if (t === 'dark') { root.setAttribute('data-theme', 'dark'); } else { root.removeAttribute('data-theme'); }
+    if (btn) { btn.setAttribute('aria-pressed', t === 'dark'); lab.textContent = t === 'dark' ? 'Light theme' : 'Dark theme'; } }
+  var saved = null; try { saved = localStorage.getItem('kr-theme'); } catch (e) {}
+  var def = 'auto'; if (def === 'auto') { def = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; }
+  apply((saved || def) === 'dark' ? 'dark' : 'light');
+  if (btn) btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; apply(next);
+    try { localStorage.setItem('kr-theme', next); } catch (e) {} });
+})();
+</script></body></html>
